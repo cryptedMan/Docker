@@ -13,7 +13,7 @@ COPY . .
 RUN dotnet publish -c release -o /app
 
 #Final image
-From mcr.microsoft.com/dotnet/aspnet:7.0
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 COPY --from=build /app .
 
